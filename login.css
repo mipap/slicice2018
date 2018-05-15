@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body{
+    background-image: url("img/Russia-2018.png");
+    font-family: 'Black Han Sans', sans-serif;
+    color: white;
+    background-size: 100%;
+}
+.login-page{
+    position: relative;
+    justify-content: center;
+    border: 2px solid white;
+    border-radius: 20px;
+    text-align: center;
+    min-height: 500px;
+    background-color: rgba(128, 128, 128, .7);
+    padding: 10%;
+    max-width: 80%;
+    font-size: 2em;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+#login p{
+    font-size: 15px;
+    padding: auto;
+    cursor: pointer;
+}
+#signup p{
+    font-size: 15px;
+    padding: auto;
+    cursor: pointer;
+}
+#signup{
+    display: none;
+}
+.form-div{
+    width: 100%;
+}
+.form-div input{
+    display: flex;
+    min-width: 100px;
+    min-height: 50px;
+    margin-top: 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+.form-div img{
+    max-width: 200px;
+    max-height: 250px;
+    float: right;
+}
+.form-div button{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: #326295;
+}
+.form-div button:hover{
+    cursor: pointer;
+    background-color: brown;
+}

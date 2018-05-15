@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+body{
+    color: white;
+    background-image: url("img/Russia-2018.png");
+    background-size: 100%;
+    font-family: 'Black Han Sans', sans-serif;
+    
+}
+header{
+    border: 1px solid white;
+    background-color: rgba(128, 128, 128, .7);
+    text-align: center;
+    
+}
+.reprezentacije img{
+    height: 42px;
+    width: 42px;
+}
+.middle{
+    display: inline-block;
+    border: 1px solid white;
+    background-color: rgba(128, 128, 128, .7);
+    margin-top: 10px;
+    min-height: 100px;
+
+}
+.middle button{
+    padding: 10px;
+    margin: 10px;
+    
+}
+.middle #tabela{
+    display: inline-flex;
+    flex-direction: column;
+    border: 2px solid white;
+}
+.middle .center{
+    display: block;
+    align-content: center;
+    min-height: 100px;
+}
+.middle .place{
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    border: 1px solid white;
+    padding: 10px;
+    cursor: pointer;
+}
