@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
 html {
     box-sizing: border-box;
 }
@@ -12,7 +13,7 @@ body{
     color: white;
     background-image: url("img/Russia-2018.png");
     background-size: 100%;
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
     
 }
 header{
@@ -33,26 +34,62 @@ header{
     min-height: 100px;
 
 }
-.middle button{
+.middle p{
+    text-align: center;
     padding: 10px;
-    margin: 10px;
-    
+    cursor: pointer;
+    font-size: 1em;
+}
+.middle button{
+    font-family: 'Black Han Sans', sans-serif;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 20px;
+    border: 1px solid white;
+    cursor: pointer;
+    background-color: #326295;
+}
+.middle button:hover{
+    cursor: pointer;
+    background-color: brown;
 }
 .middle #tabela{
-    display: inline-flex;
-    flex-direction: column;
     border: 2px solid white;
 }
 .middle .center{
-    display: block;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     align-content: center;
     min-height: 100px;
 }
 .middle .place{
-    display: flex;
-    justify-content: center;
     font-size: 2em;
     border: 1px solid white;
     padding: 10px;
     cursor: pointer;
+}
+.single-slicica{
+    flex-wrap: wrap;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: rgba(255, 0, 0, .5);
+    min-width: 255px;/*255 h:340*/
+    min-height: 340px;
+    margin: 5px;
+    opacity:1; transition: all 1500ms ease-in-out;
+}
+#logout{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    float: right;
+    margin-right: 5px;
+    margin-top: 5px;
 }
