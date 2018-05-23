@@ -704,7 +704,7 @@ var album = {
 };
 
 document.getElementById("tabela").addEventListener("click", function (event) {
-    if (event.target !== event.currentTarget){
+    if (event.target !== event.currentTarget) {
         var divId = event.target.id;
         console.log(divId);
         document.getElementById(divId).style.backgroundImage = 'url("img/serbia.jpg")';
@@ -722,7 +722,7 @@ function showInfo(id) {
         '<br>tip: ' + idPodatka["tip"] +
         '<br>reprezentacija: ' + idPodatka["reprezentacija"] + '</p>';
     document.getElementById(idSlike).style.border = '2px solid green';
-    
+
 }
 
 
