@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow');
 @import url('https://fonts.googleapis.com/css?family=Black+Han+Sans');
 html {
     box-sizing: border-box;
@@ -10,7 +11,7 @@ html {
 }
 body{
     background-image: url("img/Russia-2018.png");
-    font-family: 'Black Han Sans', sans-serif;
+    font-family: 'Archivo Narrow', sans-serif;
     color: white;
     background-size: 100%;
 }
@@ -26,25 +27,41 @@ body{
     max-width: 80%;
     font-size: 2em;
     margin-left: 10%;
-    margin-top: 10%;
+    margin-top: 6%;
 }
 #login p{
-    font-size: 15px;
+    font-size: 25px;
     padding: auto;
     cursor: pointer;
 }
 #signup p{
-    font-size: 15px;
+    font-size: 25px;
     padding: auto;
     cursor: pointer;
 }
 #signup{
     display: none;
 }
+#logout{
+    display: none;
+}
+#forgoten{
+    display: none;
+}
 .form-div{
     width: 100%;
 }
 .form-div input{
+    font-family: 'Black Han Sans', sans-serif;
+    display: flex;
+    min-width: 100px;
+    min-height: 50px;
+    margin-top: 20px;
+    font-size: 1em;
+    text-transform: uppercase;
+}
+#question{
+    font-family: 'Black Han Sans', sans-serif;
     display: flex;
     min-width: 100px;
     min-height: 50px;
@@ -65,7 +82,7 @@ body{
     text-transform: uppercase;
     width: 150px;
     height: 50px;
-    margin-top: 10px;
+    margin-top: 85px;
     border-radius: 20px;
     border: 1px solid white;
     cursor: pointer;

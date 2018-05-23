@@ -15,60 +15,60 @@ var album = {
         imam: 0, 
         naziv: "Nemanja Matić",
         width: 500,
-        height: 700
+        height: 700, 
     },
     slicica3: {
         id: 3,
-        reprezentacija: 'intro',
-        tip: 'grb',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 0, 
-        naziv: "ime",
+        naziv: "Aleksandar Mitrović",
         width: 500,
         height: 350
     },
     slicica4: {
         id: 4,
-        reprezentacija: 'intro',
-        tip: 'grb',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 0, 
-        naziv: "ime",
+        naziv: "Antonio Rukavina",
         width: 750,
         height: 0
     },
     slicica5: {
         id: 5,
-        reprezentacija: 'intro',
-        tip: 'grb',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 0, 
-        naziv: "ime",
+        naziv: "Aleksandar Kolarov",
         width: 1000,
         height: 0
     },
     slicica6: {
         id: 6,
-        reprezentacija: 'intro',
-        tip: 'grb',
+        reprezentacija: 'Serbia',
+        tip: 'igrač(C)',
         imam: 0, 
-        naziv: "ime",
+        naziv: "Branislav Ivanović",
         width: 1250,
         height: 0
     },
     slicica7: {
         id: 7,
-        reprezentacija: 'intro',
-        tip: 'grb',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 0, 
-        naziv: "ime",
+        naziv: "Adem Ljajić",
         width: 0,
         height: 350
     }
     ,
     slicica8: {
         id: 8,
-        reprezentacija: 'intro',
-        tip: 'stadion',
-        imam: 0, 
-        naziv: "ime",
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
+        imam: 1, 
+        naziv: "Aleksandar Prijović",
         width: 250,
         height: 350
     }
@@ -95,65 +95,81 @@ var album = {
     ,
     slicica11: {
         id: 11,
-        reprezentacija: 'intro',
-        tip: 'stadion',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 0, 
-        naziv: "ime",
-        width: 1250,
-        height: 350
+        naziv: "Luka Milivojević",
+        width: 250,
+        height: 700
     }
     ,
     slicica12: {
         id: 12,
-        reprezentacija: 'intro',
-        tip: 'stadion',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 0, 
-        naziv: "ime",
+        naziv: "Nikola Maksimović",
         width: 0,
         height: 700
     }
     ,
     slicica13: {
         id: 13,
-        reprezentacija: 'intro',
-        tip: 'stadion',
-        imam: 0, naziv: "ime"
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
+        imam: 0, 
+        naziv: "Duško Tošić",
+        width: 250,
+        height: 1050
     }
     ,
     slicica14: {
         id: 14,
-        reprezentacija: 'intro',
-        tip: 'stadion',
-        imam: 0, naziv: "ime"
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
+        imam: 0, 
+        naziv: "Nemanja Gudelj",
+        width: 1250,
+        height: 350
     }
     ,
     slicica15: {
         id: 15,
-        reprezentacija: 'intro',
-        tip: 'stadion',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 3,
-        naziv: "Saint Petersburg"
+        naziv: "Dušan Tadić",
+        width: 1000,
+        height: 700
     }
     ,
     slicica16: {
         id: 16,
-        reprezentacija: 'intro',
-        tip: 'stadion',
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
         imam: 0, 
-        naziv: "ime"
+        naziv: "Sergej Milinković-Savić",
+        width: 750,
+        height: -350
     }
     ,
     slicica17: {
         id: 17,
-        reprezentacija: 'intro',
-        tip: 'stadion',
-        imam: 0, naziv: "ime"
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
+        imam: 0, 
+        naziv: "Jagoš Vuković",
+        width: 1250,
+        height: -350
     },
     slicica18: {
         id: 18,
-        reprezentacija: 'intro',
-        tip: 'stadion',
-        imam: 0, naziv: "ime"
+        reprezentacija: 'Serbia',
+        tip: 'igrač',
+        imam: 0, 
+        naziv: "Matija Nastasić",
+        width: -1000,
+        height: 0
     }
     ,
     slicica19: {
@@ -689,22 +705,25 @@ var album = {
 
 function prikaziInformacije(idPodatka, idSlike, slika, width, height) {
     console.log(idPodatka);
-    document.getElementById(idSlike).innerHTML =
-        '<p>' +'ime: '+ idPodatka["naziv"] + '<br>imam: ' + idPodatka["imam"] +
-        '<br>tip: ' + idPodatka["tip"] +
-        '<br>reprezentacija: '+ idPodatka["reprezentacija"] +'</p>';
-        document.querySelector(".single-slicica").style.border = '2px solid green';
         document.getElementById(idSlike).style.backgroundColor = 'rgba(0,128,0, .6)';
         //document.querySelector(".single-slicica").style.backgroundColor = 'rgba(0, 128, 0, .6)';
         //250 u sirinu i 350 u visinu za jednu slicicu
         document.getElementById(slika).style.backgroundImage = 'url("img/serbia.jpg")';
         document.getElementById(slika).style.backgroundPosition = width+'px '+height+'px';
+
+        showInfo(idPodatka,idSlike);
 }
  
-
+function showInfo(idPodatka, idSlike) {
+    document.getElementById(idSlike).innerHTML =
+        '<p>' +'ime: '+ idPodatka["naziv"] + '<br>imam: ' + idPodatka["imam"] +
+        '<br>tip: ' + idPodatka["tip"] +
+        '<br>reprezentacija: '+ idPodatka["reprezentacija"] +'</p>';
+        document.getElementById(idSlike).style.border = '2px solid green';
+}
 
 document.getElementById("slicica1").addEventListener("click", prikaziInformacije(album.slicica1,"pic1", "slicica1", album.slicica1["width"], album.slicica1["height"]),false);
-document.getElementById("slicica2").addEventListener("click", prikaziInformacije(album.slicica2, "pic2", "slicica2", album.slicica2["width"], album.slicica2["height"]),false);
+document.getElementById("slicica2").addEventListener("click", prikaziInformacije(album.slicica2,"pic2", "slicica2", album.slicica2["width"], album.slicica2["height"]),false);
 document.getElementById("slicica3").addEventListener("click", prikaziInformacije(album.slicica3, "pic3", "slicica3", album.slicica3["width"], album.slicica3["height"]),false);
 document.getElementById("slicica4").addEventListener("click", prikaziInformacije(album.slicica4, "pic4", "slicica4", album.slicica4["width"], album.slicica4["height"]),false);
 document.getElementById("slicica5").addEventListener("click", prikaziInformacije(album.slicica5, "pic5", "slicica5", album.slicica5["width"], album.slicica5["height"]),false);
@@ -718,5 +737,8 @@ document.getElementById("slicica12").addEventListener("click", prikaziInformacij
 document.getElementById("slicica13").addEventListener("click", prikaziInformacije(album.slicica13, "pic13", "slicica13", album.slicica13["width"], album.slicica13["height"]),false);
 document.getElementById("slicica14").addEventListener("click", prikaziInformacije(album.slicica14, "pic14", "slicica14", album.slicica14["width"], album.slicica14["height"]),false);
 document.getElementById("slicica15").addEventListener("click", prikaziInformacije(album.slicica15, "pic15", "slicica15", album.slicica15["width"], album.slicica15["height"]),false);
+document.getElementById("slicica16").addEventListener("click", prikaziInformacije(album.slicica16, "pic16", "slicica16", album.slicica16["width"], album.slicica16["height"]),false);
+document.getElementById("slicica17").addEventListener("click", prikaziInformacije(album.slicica17, "pic17", "slicica17", album.slicica17["width"], album.slicica17["height"]),false);
+document.getElementById("slicica18").addEventListener("click", prikaziInformacije(album.slicica18, "pic18", "slicica18", album.slicica18["width"], album.slicica18["height"]),false);
 
 
