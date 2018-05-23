@@ -3,7 +3,7 @@ var album = {
         id: 1,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 1, 
+        imam: 1,
         naziv: "Vladimir Stojković",
         width: 0,
         height: 0
@@ -12,16 +12,16 @@ var album = {
         id: 2,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Nemanja Matić",
         width: 500,
-        height: 700, 
+        height: 700,
     },
     slicica3: {
         id: 3,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Aleksandar Mitrović",
         width: 500,
         height: 350
@@ -30,7 +30,7 @@ var album = {
         id: 4,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Antonio Rukavina",
         width: 750,
         height: 0
@@ -39,7 +39,7 @@ var album = {
         id: 5,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Aleksandar Kolarov",
         width: 1000,
         height: 0
@@ -48,7 +48,7 @@ var album = {
         id: 6,
         reprezentacija: 'Serbia',
         tip: 'igrač(C)',
-        imam: 0, 
+        imam: 0,
         naziv: "Branislav Ivanović",
         width: 1250,
         height: 0
@@ -57,7 +57,7 @@ var album = {
         id: 7,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Adem Ljajić",
         width: 0,
         height: 350
@@ -67,7 +67,7 @@ var album = {
         id: 8,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 1, 
+        imam: 1,
         naziv: "Aleksandar Prijović",
         width: 250,
         height: 350
@@ -77,7 +77,7 @@ var album = {
         id: 9,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Filip Kostić",
         width: 750,
         height: 350
@@ -87,7 +87,7 @@ var album = {
         id: 10,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Mijat Gaćinović",
         width: 1000,
         height: 350
@@ -97,7 +97,7 @@ var album = {
         id: 11,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Luka Milivojević",
         width: 250,
         height: 700
@@ -107,7 +107,7 @@ var album = {
         id: 12,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Nikola Maksimović",
         width: 0,
         height: 700
@@ -117,7 +117,7 @@ var album = {
         id: 13,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Duško Tošić",
         width: 250,
         height: 1050
@@ -127,7 +127,7 @@ var album = {
         id: 14,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Nemanja Gudelj",
         width: 1250,
         height: 350
@@ -147,7 +147,7 @@ var album = {
         id: 16,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Sergej Milinković-Savić",
         width: 750,
         height: -350
@@ -157,7 +157,7 @@ var album = {
         id: 17,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Jagoš Vuković",
         width: 1250,
         height: -350
@@ -166,7 +166,7 @@ var album = {
         id: 18,
         reprezentacija: 'Serbia',
         tip: 'igrač',
-        imam: 0, 
+        imam: 0,
         naziv: "Matija Nastasić",
         width: -1000,
         height: 0
@@ -548,7 +548,7 @@ var album = {
         id: 74,
         reprezentacija: 'egipat',
         tip: 'igrac',
-        imam: 0, 
+        imam: 0,
         naziv: "ime",
     },
     slicica75: {
@@ -701,26 +701,48 @@ var album = {
         tip: 'igrac',
         imam: 0, naziv: "ime",
     }
+};
+
+document.getElementById("tabela").addEventListener("click", function (event) {
+    if (event.target !== event.currentTarget){
+        var divId = event.target.id;
+        console.log(divId);
+        document.getElementById(divId).style.backgroundImage = 'url("img/serbia.jpg")';
+        document.getElementById(divId).style.backgroundPosition = album[divId].width + 'px ' + album[divId].height + 'px';
+        showInfo(divId);
+    }
+    event.stopPropagation();
+});
+
+function showInfo(id) {
+    var idPodatka = album[id],
+        idSlike = id;
+    document.getElementById(idSlike).innerHTML =
+        '<p>' + 'ime: ' + idPodatka["naziv"] + '<br>imam: ' + idPodatka["imam"] +
+        '<br>tip: ' + idPodatka["tip"] +
+        '<br>reprezentacija: ' + idPodatka["reprezentacija"] + '</p>';
+    document.getElementById(idSlike).style.border = '2px solid green';
+    
 }
 
+
+/*
 function prikaziInformacije(idPodatka, idSlike, slika, width, height) {
     console.log(idPodatka);
-        document.getElementById(idSlike).style.backgroundColor = 'rgba(0,128,0, .6)';
-        //document.querySelector(".single-slicica").style.backgroundColor = 'rgba(0, 128, 0, .6)';
-        //250 u sirinu i 350 u visinu za jednu slicicu
-        document.getElementById(slika).style.backgroundImage = 'url("img/serbia.jpg")';
-        document.getElementById(slika).style.backgroundPosition = width+'px '+height+'px';
+    document.getElementById(idSlike).style.backgroundColor = 'rgba(0,128,0, .6)';
+    //document.querySelector(".single-slicica").style.backgroundColor = 'rgba(0, 128, 0, .6)';
+    //250 u sirinu i 350 u visinu za jednu slicicu
+    document.getElementById(slika).style.backgroundImage = 'url("img/serbia.jpg")';
+    document.getElementById(slika).style.backgroundPosition = width + 'px ' + height + 'px';
 
-        showInfo(idPodatka,idSlike);
+    showInfo(idPodatka, idSlike);
 }
- 
-function showInfo(idPodatka, idSlike) {
-    document.getElementById(idSlike).innerHTML =
-        '<p>' +'ime: '+ idPodatka["naziv"] + '<br>imam: ' + idPodatka["imam"] +
-        '<br>tip: ' + idPodatka["tip"] +
-        '<br>reprezentacija: '+ idPodatka["reprezentacija"] +'</p>';
-        document.getElementById(idSlike).style.border = '2px solid green';
-}
+*/
+
+
+
+
+/*
 
 document.getElementById("slicica1").addEventListener("click", prikaziInformacije(album.slicica1,"pic1", "slicica1", album.slicica1["width"], album.slicica1["height"]),false);
 document.getElementById("slicica2").addEventListener("click", prikaziInformacije(album.slicica2,"pic2", "slicica2", album.slicica2["width"], album.slicica2["height"]),false);
@@ -742,3 +764,4 @@ document.getElementById("slicica17").addEventListener("click", prikaziInformacij
 document.getElementById("slicica18").addEventListener("click", prikaziInformacije(album.slicica18, "pic18", "slicica18", album.slicica18["width"], album.slicica18["height"]),false);
 
 
+*/
